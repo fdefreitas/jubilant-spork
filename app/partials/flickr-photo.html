@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xs-12">
+        <a ng-href="{{ photo.link }}">
+            <h4 ng-bind="photo.title | limitTo : 140"></h4>
+        </a>
+    </div>    
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h5 class="text-muted" ng-bind="photo.author"></h5>
+    </div>
+</div>
+<div class="row" ng-if="photo.tags" >
+    <div class="">
+      <span class="label label-info col-xs-4" ng-repeat="tag in photo.tags" ng-bind="tag"></span>          
+    </div>
+</div>
+<div class="row">
+    <a ng-href="{{ photo.link }}" class="thumbnail">
+    <img class="img-responsive" ng-src="{{ photo.media.m}}" alt="{{ photo.title}}">
+</a>
+</div>
